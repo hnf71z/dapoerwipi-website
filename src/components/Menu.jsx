@@ -1,10 +1,10 @@
 import React from 'react'
 
 const items = [
-  {id:1, img: '/assets/Dimsumprofile.JPG', title: 'Dimsum Mentai', desc: 'Dimsum dengan mentai segar dan bumbu rahasia kami', price: 'Rp 25.000'},
-  {id:2, img: '/assets/cirengoi.jpg', title: 'Dimsum Ayam Jamur', desc: 'Perpaduan daging ayam pilihan dan jamur shitake', price: 'Rp 22.000'},
-  {id:3, img: '/assets/donatu.JPG', title: 'Cireng Bumbu Rujak', desc: 'Cireng krispi dengan bumbu rujak manis pedas khas Bandung', price: 'Rp 15.000'},
-  {id:4, img: '/assets/kuecake.JPG', title: 'Cireng Keju Mozarella', desc: 'Cireng isi keju mozarella lumer dengan baluran tepung krispi', price: 'Rp 18.000'}
+  {id:1, img: '/assets/chicken-katsu.jpg', title: 'Chicken Katsu', desc: 'Dimsum dengan mentai segar dan bumbu rahasia kami', price: 'Rp 25.000'},
+  {id:2, img: '/assets/chicken-egg-roll.jpg', title: 'Chicken Egg Roll', desc: 'Perpaduan daging ayam pilihan dan jamur shitake', price: 'Rp 22.000'},
+  {id:3, img: '/assets/chicken-mie-katsu.jpg', title: 'Mie Katsu', desc: 'Cireng krispi dengan bumbu rujak manis pedas khas Bandung', price: 'Rp 15.000'},
+  {id:4, img: '/assets/chicken-geprek-mewah.png', title: 'Ayam Geprek', desc: 'Cireng isi keju mozarella lumer dengan baluran tepung krispi', price: 'Rp 18.000'}
 ]
 
 export default function Menu(){
@@ -12,7 +12,7 @@ export default function Menu(){
     <section className="menu" id="menu">
       <div className="menu-container">
         <div className="section-title">
-          <h2>Menu Kami</h2>
+          <h2>Menu Favorite</h2>
           <p>Berbagai pilihan dimsum dan cireng dengan cita rasa istimewa</p>
         </div>
         <div className="menu-grid">

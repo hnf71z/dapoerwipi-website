@@ -6,11 +6,12 @@
 @tailwind utilities;
 
 :root {
-    --primary: #FF6B6B;
-    --secondary: #FFA3A3;
+    /* Brown palette aligned with header */
+    --primary: rgb(75, 54, 25); /* dark brown - used for primary buttons and highlights */
+    --secondary: rgb(165, 120, 78); /* lighter brown for hover/secondary states */
     --dark: #333333;
     --light: #FFFFFF;
-    --accent: #FFD166;
+    --accent: rgb(210, 170, 100); /* warm accent (light brown/gold) */
 }
 
 * {
@@ -28,18 +29,28 @@ body {
 
 /* Header */
 header {
-    background-color: var(--light);
+    background-color: rgb(244, 239, 220); /* updated to requested RGB */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
+/* hide header when scrolling down */
+.header--hidden {
+    transform: translateY(-110%);
+    transition: transform 300ms ease-in-out;
+}
+
+header {
+    transition: transform 300ms ease-in-out;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 7%;
+    padding: 1rem 7%; /* reduced to make header shorter */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -50,14 +61,16 @@ header {
 }
 
 .logo img {
-    height: 40px;
-    margin-right: 10px;
+    height: 72px; /* reduced from 120px to fit shorter header */
+    margin-right: 12px;
+    display: block;
 }
 
 .logo h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--primary);
     font-weight: 700;
+    line-height: 1;
 }
 
 .nav-links {
@@ -77,7 +90,7 @@ header {
 }
 
 .nav-links a:hover {
-    color: var(--primary);
+    color: rgb(223, 198, 153); /* new hover color for header navigation */
 }
 
 .hamburger {
@@ -87,7 +100,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/cirengbg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/assets/dapoeriwipiHero.png');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -95,7 +108,7 @@ header {
     align-items: center;
     text-align: center;
     color: var(--light);
-    padding-top: 80px;
+    padding-top: 64px; /* smaller top offset to match shorter header */
 }
 
 .hero-content {
@@ -121,8 +134,8 @@ header {
 
 .cta-button {
     display: inline-block;
-    background-color: var(--primary);
-    color: var(--light);
+    background-color: rgb(243, 239, 222); /* warmer light-brown by default */
+    color: var(--dark);
     padding: 0.8rem 2rem;
     border-radius: 50px;
     text-decoration: none;
@@ -132,16 +145,26 @@ header {
 }
 
 .cta-button:hover {
-    background-color: var(--secondary);
+    background-color: var(--primary); /* change to darker brown on hover */
+    color: var(--light);
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* About Section */
 .about {
-    padding: 5rem 7%;
+    width: 100%;
+    padding: 5rem 2%;
+    background-color: rgb(244, 239, 220); /* light brown background for About */
+}
+
+.about-content {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
+    align-items: stretch; /* stretch children so image card matches text height */
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .section-title {
@@ -163,22 +186,31 @@ header {
 
 .about-content {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* stretch children so image card matches text height */
     flex-wrap: wrap;
     gap: 2rem;
 }
 
+
 .about-img {
-    flex: 1 1 300px;
+    flex: 1 1 360px; /* allow a bit more width for the image block */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    min-height: 280px; /* baseline height for small screens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light); /* make the card white */
+    padding: 2.5rem; /* give inner spacing so image doesn't touch edges */
 }
 
 .about-img img {
     width: 100%;
+    max-width: 70%;
     height: auto;
     display: block;
+    object-fit: contain; /* ensure whole logo is visible */
     transition: transform 0.5s;
 }
 
@@ -204,7 +236,7 @@ header {
 /* Menu Section */
 .menu {
     padding: 5rem 7%;
-    background-color: #fff9f9;
+    background-color: var(--light); /* menu background set to white */
 }
 
 .menu-container {
@@ -220,7 +252,7 @@ header {
 }
 
 .menu-item {
-    background-color: var(--light);
+    background-color: var(--light); /* keep cards white for contrast */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -292,7 +324,7 @@ header {
 /* Testimonial Section */
 .testimonials {
     padding: 5rem 7%;
-    background-color: var(--light);
+    background-color: rgb(244, 239, 220); /* light brown for testimonials */
 }
 
 .testimonial-container {
@@ -371,7 +403,7 @@ header {
 /* Contact Section */
 .contact {
     padding: 5rem 7%;
-    background-color: #fff9f9;
+    background-color: var(--light); /* changed to white for cleaner contact section */
 }
 
 .contact-container {
@@ -496,8 +528,8 @@ header {
 
 /* Footer */
 footer {
-    background-color: var(--dark);
-    color: var(--light);
+    background-color: rgb(243, 239, 222);
+    color: var(--primary); /* make footer text dark brown for better contrast */
     padding: 3rem 7% 1rem;
 }
 
@@ -528,7 +560,7 @@ footer {
 
 .footer-col p {
     margin-bottom: 1rem;
-    color: #bbb;
+    color: var(--primary);
 }
 
 .footer-links {
@@ -540,13 +572,13 @@ footer {
 }
 
 .footer-links a {
-    color: #bbb;
+    color: var(--primary);
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.2s ease;
 }
 
 .footer-links a:hover {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .footer-bottom {
@@ -556,7 +588,7 @@ footer {
 }
 
 .footer-bottom p {
-    color: #bbb;
+    color: var(--primary);
     font-size: 0.9rem;
 }
 
@@ -613,6 +645,28 @@ footer {
 
     .section-title h2 {
         font-size: 2rem;
+    }
+}
+
+/* Responsive adjustments for large logo */
+@media (max-width: 900px) {
+    .logo img {
+        height: 80px; /* scale down on medium screens */
+    }
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 56px; /* mobile friendly */
+    }
+    .logo h1 {
+        font-size: 1rem;
+    }
+    .navbar {
+        padding: 0.8rem 4%;
     }
 }
 
