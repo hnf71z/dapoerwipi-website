@@ -1,7 +1,3 @@
-# Teman Sore - React (Vite)
-
-Konversi situs statis Teman Sore ke aplikasi React menggunakan Vite.
-
 Instruksi singkat:
 
 1. Install dependency:
