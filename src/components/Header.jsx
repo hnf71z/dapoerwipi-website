@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import logoImg from '../assets/Dwipi-logo.png'
 
 export default function Header() {
   const [open, setOpen] = useState(false)
@@ -41,7 +42,7 @@ export default function Header() {
     <header className={visible ? '' : 'header--hidden'}>
       <nav className="navbar">
         <div className="logo">
-          <img src="/assets/Dwipi-logo.png" alt="Dapoer Wipi Logo" />
+          <img src={logoImg} alt="Dapoer Wipi Logo" />
           {/* <h1>Dapoer Wipi</h1> */}
         </div>
         <ul className={`nav-links ${open ? 'active' : ''}`}>

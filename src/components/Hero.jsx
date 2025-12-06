@@ -1,8 +1,9 @@
 import React from 'react'
+import heroImg from '../assets/dapoeriwipiHero.png'
 
 export default function Hero(){
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="home" style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${heroImg})`}}>
       <div className="hero-content">
         <h1>Nikmati Dimsum & Cireng Spesial</h1>
         <p>Teman Sore menyajikan berbagai varian dimsum dan cireng dengan cita rasa autentik yang akan menemani waktu santai Anda</p>

@@ -1,4 +1,5 @@
 import React from 'react'
+import logoImg from '../assets/Dwipi-logo.png'
 
 export default function About(){
   return (
@@ -9,7 +10,7 @@ export default function About(){
       </div>
       <div className="about-content">
         <div className="about-img">
-          <img src="/assets/Dwipi-logo.png" alt="Tentang Teman Sore" />
+          <img src={logoImg} alt="Tentang Teman Sore" />
         </div>
         <div className="about-text">
           <h3>Cerita di Balik Teman Sore</h3>
