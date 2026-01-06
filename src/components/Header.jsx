@@ -7,6 +7,15 @@ export default function Header() {
   const lastScrollY = useRef(0)
   const ticking = useRef(false)
 
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault()
+    const targetElement = document.getElementById(targetId)
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setOpen(false) // Close mobile menu after clicking
+    }
+  }
+
   useEffect(() => {
     function handleScroll() {
       const currentY = window.scrollY
@@ -46,11 +55,11 @@ export default function Header() {
           {/* <h1>Dapoer Wipi</h1> */}
         </div>
         <ul className={`nav-links ${open ? 'active' : ''}`}>
-          <li><a href="#home">Beranda</a></li>
-          <li><a href="#about">Tentang Kami</a></li>
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#testimonial">Testimoni</a></li>
-          <li><a href="#contact">Kontak</a></li>
+          <li><a href="#home" onClick={(e) => handleNavClick(e, 'home')}>Beranda</a></li>
+          <li><a href="#about" onClick={(e) => handleNavClick(e, 'about')}>Tentang Kami</a></li>
+          <li><a href="#menu" onClick={(e) => handleNavClick(e, 'menu')}>Menu</a></li>
+          <li><a href="#testimonial" onClick={(e) => handleNavClick(e, 'testimonial')}>Testimoni</a></li>
+          <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')}>Kontak</a></li>
         </ul>
         <div className="hamburger" onClick={() => setOpen(!open)}>
           <i className="fas fa-bars"></i>

@@ -77,18 +77,53 @@ header {
 }
 
 .nav-links li {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--dark);
     font-weight: 500;
-    transition: color 0.3s;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(165, 120, 78, 0.1);
+    border-radius: 8px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+.nav-links a:hover::before {
+    transform: scale(1);
 }
 
 .nav-links a:hover {
-    color: rgb(223, 198, 153); /* new hover color for header navigation */
+    color: var(--primary);
+    background-color: rgba(243, 239, 222, 0.5);
+    box-shadow: 0 2px 8px rgba(75, 54, 25, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Active link style */
+.nav-links a.active {
+    background-color: rgba(165, 120, 78, 0.15);
+    color: var(--primary);
+}
+
+.nav-links a.active::before {
+    transform: scale(1);
 }
 
 .hamburger {
@@ -612,7 +647,7 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background-color: var(--light);
+        background-color: rgb(244, 239, 220);
         flex-direction: column;
         align-items: center;
         padding-top: 2rem;
@@ -625,6 +660,21 @@ footer {
 
     .nav-links li {
         margin: 1rem 0;
+        width: 80%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        border-radius: 12px;
+        font-size: 1.1rem;
+    }
+
+    .nav-links a:hover {
+        transform: none;
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
     .hamburger {

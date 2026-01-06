@@ -1,8 +1,8 @@
 import React from 'react'
 
 const data = [
-  {id:1, text: 'Dimsumnya enak banget! Teksturnya pas, isiannya banyak, dan bumbunya meresap. Sudah beberapa kali pesan dan selalu konsisten enaknya. Recommended banget!', name: 'Sarah Wijaya', role: 'Pelanggan Setia', img: 'https://randomuser.me/api/portraits/women/32.jpg'},
-  {id:2, text: 'Cireng bumbu rujaknya nagih banget! Pedas manisnya pas, teksturnya krispi di luar lembut di dalam. Cocok banget buat teman nonton drakor.', name: 'Budi Santoso', role: 'Pelanggan Baru', img: 'https://randomuser.me/api/portraits/men/45.jpg'},
+  {id:1, text: 'Chicken katsunya enak banget! Dagingnya empuk, tepungnya krispi, dan sausnya pas banget. Sudah beberapa kali pesan dan selalu konsisten enaknya. Recommended banget!', name: 'Sarah Wijaya', role: 'Pelanggan Setia', img: 'https://randomuser.me/api/portraits/women/32.jpg'},
+  {id:2, text: 'Chicken gepreknya nagih banget! Pedasnya nampol tapi tetap nikmat, ayamnya juicy dan porsinya besar. Cocok banget buat makan siang yang mengenyangkan.', name: 'Budi Santoso', role: 'Pelanggan Baru', img: 'https://randomuser.me/api/portraits/men/45.jpg'},
   {id:3, text: 'Pesen untuk acara arisan, semua ibu-ibu pada suka! Pesannya gampang, pengirimannya tepat waktu, dan harganya terjangkau untuk kualitas premium seperti ini.', name: 'Dewi Lestari', role: 'Ketua Arisan', img: 'https://randomuser.me/api/portraits/women/68.jpg'}
   ,{id:4, text: 'Pelayanan cepat dan rasanya selalu enak. Packaging rapi membuat pesanan aman sampai tujuan.', name: 'Rudi Hartono', role: 'Pelanggan', img: 'https://randomuser.me/api/portraits/men/12.jpg'},
   {id:5, text: 'Cocok banget buat acara keluarga, semua makanan habis dalam sekejap. Harga terjangkau dan kualitas oke.', name: 'Siti Aminah', role: 'Ibu Rumah Tangga', img: 'https://randomuser.me/api/portraits/women/21.jpg'},
@@ -15,7 +15,7 @@ export default function Testimonials(){
       <div className="testimonial-container">
         <div className="section-title">
           <h2>Apa Kata Pelanggan</h2>
-          <p>Testimoni dari mereka yang telah mencicipi kelezatan Teman Sore</p>
+          <p>Testimoni dari mereka yang telah mencicipi kelezatan Dapoer Wipi</p>
         </div>
         <div className="testimonial-grid">
           {data.map(t => (

@@ -1,30 +1,38 @@
 import React from 'react'
 
 export default function Footer(){
+  const handleScrollToSection = (e, sectionId) => {
+    e.preventDefault()
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
   return (
     <footer>
       <div className="footer-container">
         <div className="footer-col">
-          <h3>Teman Sore</h3>
-          <p>UMKM makanan khusus dimsum dan cireng dengan cita rasa autentik yang siap menemani waktu santai Anda.</p>
+          <h3>Dapoer Wipi</h3>
+          <p>UMKM makanan khusus olahan ayam dengan cita rasa istimewa yang siap menemani waktu makan Anda.</p>
         </div>
         <div className="footer-col">
           <h3>Menu Populer</h3>
           <ul className="footer-links">
-            <li><a href="#">Dimsum Udang Spesial</a></li>
-            <li><a href="#">Dimsum Ayam Jamur</a></li>
-            <li><a href="#">Cireng Bumbu Rujak</a></li>
-            <li><a href="#">Cireng Keju Mozarella</a></li>
+            <li><a href="#menu" onClick={(e) => handleScrollToSection(e, 'menu')}>Chicken Katsu</a></li>
+            <li><a href="#menu" onClick={(e) => handleScrollToSection(e, 'menu')}>Chicken Geprek Mewah</a></li>
+            <li><a href="#menu" onClick={(e) => handleScrollToSection(e, 'menu')}>Chicken Egg Roll</a></li>
+            <li><a href="#menu" onClick={(e) => handleScrollToSection(e, 'menu')}>Chicken Mie Katsu</a></li>
           </ul>
         </div>
         <div className="footer-col">
           <h3>Link Cepat</h3>
           <ul className="footer-links">
-            <li><a href="#home">Beranda</a></li>
-            <li><a href="#about">Tentang Kami</a></li>
-            <li><a href="#menu">Menu</a></li>
-            <li><a href="#testimonial">Testimoni</a></li>
-            <li><a href="#contact">Kontak</a></li>
+            <li><a href="#home" onClick={(e) => handleScrollToSection(e, 'home')}>Beranda</a></li>
+            <li><a href="#about" onClick={(e) => handleScrollToSection(e, 'about')}>Tentang Kami</a></li>
+            <li><a href="#menu" onClick={(e) => handleScrollToSection(e, 'menu')}>Menu</a></li>
+            <li><a href="#testimonial" onClick={(e) => handleScrollToSection(e, 'testimonial')}>Testimoni</a></li>
+            <li><a href="#contact" onClick={(e) => handleScrollToSection(e, 'contact')}>Kontak</a></li>
           </ul>
         </div>
         <div className="footer-col">
@@ -36,7 +44,7 @@ export default function Footer(){
           </form>
         </div>
       </div>
-      <div className="footer-bottom"><p>© 2023 Teman Sore. All Rights Reserved.</p></div>
+      <div className="footer-bottom"><p>© 2023 Dapoer Wipi. All Rights Reserved.</p></div>
     </footer>
   )
 }

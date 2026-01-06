@@ -10,13 +10,13 @@ export default function About(){
       </div>
       <div className="about-content">
         <div className="about-img">
-          <img src={logoImg} alt="Tentang Teman Sore" />
+          <img src={logoImg} alt="Tentang Dapoer Wipi" />
         </div>
         <div className="about-text">
-          <h3>Cerita di Balik Teman Sore</h3>
-          <p>Teman Sore berawal dari kecintaan kami terhadap makanan ringan yang bisa dinikmati kapan saja, terutama di sore hari. Dimulai dari usaha rumahan pada tahun 2020, kini kami berkembang menjadi UMKM yang melayani berbagai pesanan untuk acara dan kebutuhan sehari-hari.</p>
-          <p>Kami menggunakan bahan-bahan berkualitas tinggi dan proses pembuatan yang higienis untuk memastikan setiap gigitan memberikan pengalaman makan yang memuaskan.</p>
-          <p>Visi kami adalah menjadi teman setia di setiap momen santai Anda dengan menyajikan makanan ringan yang lezat, sehat, dan terjangkau.</p>
+          <h3>Cerita di Balik Dapoer Wipi</h3>
+          <p>Dapoer Wipi berawal dari kecintaan kami terhadap olahan ayam berkualitas yang bisa dinikmati kapan saja. Dimulai dari usaha rumahan pada tahun 2020, kini kami berkembang menjadi UMKM yang melayani berbagai pesanan untuk acara dan kebutuhan sehari-hari.</p>
+          <p>Kami menggunakan bahan-bahan berkualitas tinggi dan proses pembuatan yang higienis untuk memastikan setiap hidangan memberikan pengalaman makan yang memuaskan.</p>
+          <p>Visi kami adalah menjadi dapoer pilihan keluarga Indonesia dengan menyajikan hidangan ayam yang lezat, sehat, dan terjangkau.</p>
         </div>
       </div>
     </section>
